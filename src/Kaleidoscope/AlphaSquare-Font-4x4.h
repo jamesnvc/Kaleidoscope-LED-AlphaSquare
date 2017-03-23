@@ -16,10 +16,17 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#pragma once
-
 #include <Kaleidoscope/LED-AlphaSquare.h>
-#include <Kaleidoscope/AlphaSquare-Effect.h>
-#include <Kaleidoscope/AlphaSquare-Symbols.h>
 
-#include <Kaleidoscope/AlphaSquare-Font-4x4.h>
+namespace KaleidoscopePlugins {
+  namespace AlphaSquareFonts {
+    class Font4x4_ : public AlphaSquare::Font {
+    public:
+      Font4x4_ (void) {};
+
+      virtual uint16_t lookup (Key key) final;
+    };
+
+    extern Font4x4_ Font4x4;
+  }
+}

@@ -97,6 +97,7 @@ void setup () {
 
   USE_PLUGINS (&AlphaSquare, &AlphaSquareEffect, &Macros);
   AlphaSquare.color = { 0xcb, 0xc0, 0xff };
+  AlphaSquare.font = &KaleidoscopePlugins::AlphaSquareFonts::Font4x4;
 }
 
 void loop () {

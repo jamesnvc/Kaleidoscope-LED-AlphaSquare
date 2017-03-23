@@ -37,6 +37,11 @@
 namespace KaleidoscopePlugins {
   class AlphaSquare : public KaleidoscopePlugin {
   public:
+    class Font {
+    public:
+      virtual uint16_t lookup (Key key) = 0;
+    };
+
     AlphaSquare (void);
 
     virtual void begin (void) final;
@@ -60,6 +65,7 @@ namespace KaleidoscopePlugins {
     static void clear (uint16_t symbol) { clear (symbol, 0, 2); };
 
     static cRGB color;
+    static Font *font;
   };
 };
 
